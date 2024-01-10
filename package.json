@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "@biomejs/biome": "^1.4.1",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "anvil": "docker compose up --build --force-recreate anvil",
+    "api:demo": "./api/scripts/demo.sh",
+    "contracts": "docker compose up --build contracts",
+    "drop": "cd indexer && bun drop",
+    "database": "docker compose up --build --force-recreate database",
+    "db": "bun database",
+    "ddb": "bun drop && bun db",
+    "ddba": "bun drop && docker compose up --build --force-recreate anvil database",
+    "dbup": "cd indexer && bun database:up",
+    "indexer": "docker compose up --build indexer",
+    "reup": "bun drop && bun up",
+    "up": "docker compose up --build --force-recreate"
+  }
+}

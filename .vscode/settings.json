@@ -1,0 +1,42 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableCommitSigning": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "editor.defaultFormatter": "biomejs.biome",
+  "[json]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[jsonc]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[typescript]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[javascript]": { "editor.defaultFormatter": "biomejs.biome" },
+  "files.associations": {
+    "biome.json": "jsonc",
+    "settings.json": "jsonc"
+  },
+  "search.exclude": {
+    "_": true,
+    "**/dist/**": true,
+    "**/node_modules": true
+  },
+  "files.exclude": {},
+  "yaml.format.singleQuote": true,
+  // disable various telemetry services
+  "redhat.telemetry.enabled": false,
+  "gitlens.telemetry.enabled": false,
+  "docsYaml.telemetry.enableTelemetry": false,
+  "database-client.telemetry.usesOnlineServices": false,
+  "sql-formatter.dialect": "postgresql",
+  "sql-formatter.linesBetweenQueries": 3,
+  "sql-formatter.uppercase": true,
+  "[sql]": {
+    "editor.defaultFormatter": "lea21st.vscode-sql-formatter"
+  },
+  "rust-analyzer.linkedProjects": ["indexer/efp-indexer/Cargo.toml"]
+}

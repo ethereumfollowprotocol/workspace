@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+
+  anvil:
+    container_name: efp-testnet-anvil
+    image: ghcr.io/foundry-rs/foundry:latest
+    command: anvil --block-time 1
+    tty: true
+    environment:
+      - ANVIL_IP_ADDR=0.0.0.0
+    ports:
+      - 8545:8545
+    networks:
+      - default
+
+  database:
+    extends:
+      file: indexer/compose.yml
+      service: database
+
+  # api:
+  #   depends_on:
+  #     - database
+  #   extends:
+  #     file: api/compose.yml
+  #     service: api
+
+  indexer:
+    depends_on:
+      - database
+    extends:
+      file: indexer/compose.yml
+      service: indexer
+
+  contracts:
+    depends_on:
+      anvil:
+        condition: service_started
+    extends:
+      file: contracts-beta/compose.yml
+      service: contracts
+
+volumes:
+  database:
+
+networks:
+  default:
+    driver: bridge

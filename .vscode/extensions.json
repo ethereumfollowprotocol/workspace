@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "biomejs.biome",
+    "mikestead.dotenv",
+    "EditorConfig.EditorConfig",
+    "cweijan.vscode-database-client2",
+    "ms-vscode.remote-explorer",
+    "ms-vscode-remote.vscode-remote-extensionpack"
+  ],
+  "unwantedRecommendations": [
+    // we use Biome for linting and formatting so we don't need these
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ]
+}

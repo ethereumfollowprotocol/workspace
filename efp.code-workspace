@@ -1,0 +1,52 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "api"
+    },
+    {
+      "path": "app"
+    },
+    {
+      "path": "contracts-beta"
+    },
+    {
+      "path": "docs"
+    },
+    {
+      "path": "indexer"
+    },
+    {
+      "path": "indexer/efp-indexer"
+    }
+  ],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "git.confirmSync": false,
+    "files.associations": {
+      "biome.json": "jsonc",
+      "settings.json": "jsonc"
+    },
+    "database-client.telemetry.usesOnlineServices": false,
+    "sqltools.connections": [
+      {
+        "previewLimit": 50,
+        "server": "localhost",
+        "driver": "PostgreSQL",
+        "name": "efp-database",
+        "group": "efp",
+        "connectString": "postgresql://postgres:postgres@host.docker.internal:5432/efp?sslmode=disable"
+      }
+    ],
+    "sql-formatter.dialect": "postgresql",
+    "sql-formatter.linesBetweenQueries": 3,
+    "sql-formatter.uppercase": true,
+    "[sql]": {
+      "editor.defaultFormatter": "lea21st.vscode-sql-formatter"
+    },
+    "rust-analyzer.linkedProjects": ["./indexer/efp-indexer/Cargo.toml"]
+  }
+}
