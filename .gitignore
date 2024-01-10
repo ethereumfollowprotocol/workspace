@@ -1,0 +1,11 @@
+app/
+api/
+contracts-beta/
+docs/
+indexer/
+
+node_modules/
+
+.env
+.idea/
+
