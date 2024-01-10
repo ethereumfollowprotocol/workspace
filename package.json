@@ -1,4 +1,8 @@
 {
+  "name": "efp-workspace",
+  "version": "1.0.0",
+  "description": "Root developer workspace for monorepo-style development of Ethereum Follow Protocol",
+  "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
     "typescript": "^5.3.3"
