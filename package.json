@@ -6,6 +6,12 @@
   "scripts": {
     "anvil": "docker compose up --build --force-recreate anvil",
     "api:demo": "./api/scripts/demo.sh",
+    "clone": "bun clone:api && bun clone:app && bun clone:contracts-beta && bun clone:docs && bun clone:indexer",
+    "clone:api": "[ -d 'api' ] || git clone --recurse-submodules git@github.com:ethereumfollowprotocol/api.git api",
+    "clone:app": "[ -d 'app' ] || git clone --recurse-submodules git@github.com:ethereumfollowprotocol/app.git app",
+    "clone:contracts-beta": "[ -d 'contracts-beta' ] || git clone --recurse-submodules git@github.com:ethereumfollowprotocol/contracts-beta.git contracts-beta",
+    "clone:docs": "[ -d 'docs' ] || git clone --recurse-submodules git@github.com:ethereumfollowprotocol/docs.git docs",
+    "clone:indexer": "[ -d 'indexer' ] || git clone --recurse-submodules git@github.com:ethereumfollowprotocol/indexer.git indexer",
     "contracts": "docker compose up --build contracts",
     "drop": "cd indexer && bun drop",
     "database": "docker compose up --build --force-recreate database",
