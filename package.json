@@ -9,7 +9,9 @@
   },
   "scripts": {
     "anvil": "docker compose up --build --force-recreate anvil",
+    "api": "cd api && bun dev",
     "api:demo": "./api/scripts/demo.sh",
+    "api:time": "./api/scripts/demo.sh time",
     "clone": "bun clone:api && bun clone:app && bun clone:contracts-beta && bun clone:docs && bun clone:indexer",
     "clone:api": "[ -d 'api' ] || git clone --recurse-submodules git@github.com:ethereumfollowprotocol/api.git api",
     "clone:app": "[ -d 'app' ] || git clone --recurse-submodules git@github.com:ethereumfollowprotocol/app.git app",
