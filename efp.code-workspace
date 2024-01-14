@@ -47,6 +47,7 @@
     "[sql]": {
       "editor.defaultFormatter": "lea21st.vscode-sql-formatter"
     },
-    "rust-analyzer.linkedProjects": ["./indexer/efp-indexer/Cargo.toml"]
+    "rust-analyzer.linkedProjects": ["./indexer/efp-indexer/Cargo.toml"],
+    "editor.defaultFormatter": "biomejs.biome"
   }
 }
